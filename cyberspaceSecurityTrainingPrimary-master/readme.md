@@ -49,12 +49,12 @@
    个人信息的更新，账号的注册与注销。
 
 #### JDBC阶段运行截图：
-![图片](images\image17.png "jdbc")
-![图片](images\image18.png "jdbc")
-![图片](images\image19.png "jdbc")
-![图片](images\image20.png "jdbc")
-![图片](images\image21.png "jdbc")
-![图片](images\image22.png "jdbc")
+![图片](cyberspaceSecurityTrainingPrimary-master/images/image17.png "jdbc")
+![图片](cyberspaceSecurityTrainingPrimary-master/images/image18.png "jdbc")
+![图片](cyberspaceSecurityTrainingPrimary-master/images/image19.png "jdbc")
+![图片](cyberspaceSecurityTrainingPrimary-master/images/image20.png "jdbc")
+![图片](cyberspaceSecurityTrainingPrimary-master/images/image21.png "jdbc")
+![图片](cyberspaceSecurityTrainingPrimary-master/images/image22.png "jdbc")
 ![图片](images\image23.png "jdbc")
 ![图片](images\image24.png "jdbc")
 ![图片](images\image25.png "jdbc")
