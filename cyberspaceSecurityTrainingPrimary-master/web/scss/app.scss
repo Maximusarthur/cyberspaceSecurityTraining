@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+
+}
+
+.btn {
+  @apply flex border border-solid h-8 cursor-pointer rounded drop-shadow-lg  text-center  items-center justify-center;
+}
+
+.btn-green {
+  @apply bg-green-500 text-white hover:bg-green-300 hover:font-bold;
+}
+
+.btn-blue {
+  @apply bg-blue-400 text-white;
+}
+
+.btn-stone {
+  @apply bg-stone-200 text-black border-stone-300;
+}
+
+.busiBox{
+  @apply flex items-center border border-gray-300;
+}
+
+.busiBtn{
+  @apply inline-flex h-6 items-center justify-center bg-yellow-200 text-orange-600 font-bold text-sm border-white rounded-md py-2 px-4;
+}
+
+.estimateWord{
+  @apply text-xs ml-1 text-gray-600;
+}
+
+.aboutPrice{
+  @apply mt-1 text-xs float-left text-gray-600;
+}
+
+.aboutOrder{
+  @apply mt-1 mb-4 text-xs float-right text-gray-600;
+}
+
+.payBtn{
+  @apply inline-flex h-6 items-center justify-center
+  bg-yellow-200 text-orange-600
+  font-bold text-sm border-white rounded-md py-2 px-4;
+}
+
+.minusBtn {
+  @apply bg-gray-300 text-gray-700 rounded-full;
+}
+
+.plusBtn {
+  @apply bg-blue-500 text-white rounded-full;
+}
+
+.payBottomBar{
+  @apply flex flex-row h-20 w-full
+  fixed bottom-0 left-0 z-50
+  justify-between items-end;
+}
+
+.cart{
+  @apply absolute -top-4 left-2 bg-blue-500 text-white
+  rounded-full h-16 w-16 flex items-center justify-center
+  border-4 border-gray-800;
+}
+
+.paytopBar {
+  @apply mb-4 flex flex-col bg-blue-400 text-white  h-28
+  drop-shadow-lg;
+}

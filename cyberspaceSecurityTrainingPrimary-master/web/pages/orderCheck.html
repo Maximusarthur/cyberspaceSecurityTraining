@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="../images/logo-96x96.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>饿了么</title>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="paytopBar">
+    <p class="text-xl text-center items-center justify-center"><strong>确认订单</strong></p>
+    <div class="mt-2 flex">
+        <div class="flex flex-col items-start">
+            <div class="text-left text-xs">订单配送至：</div>
+            <div class="flex flex-row items-center justify-between">
+                <div class="text-lg mb-1">云南省昆明市呈贡区云南大学楸三</div>
+                <div class="text-left flex items-center mb-1">&nbsp; &gt;</div>
+            </div>
+            <div class="text-xs">汪先生 17800001029</div>
+        </div>
+    </div>
+</div>
+
+<div class="ordersBox">
+    <ul>
+        <li>
+            <div class="orderBox mt-1">
+                <div class="row_1 mb-2">
+                    <a href="../pages/business.html">
+                        <p class="text-xl font-medium text-black">
+                            西施冒菜
+                            <i class="fas fa-caret-down fa-xs"></i>
+                        </p>
+                    </a>
+                </div>
+                <div class="flex flex-row text-lg text-gray-600">
+                    <img src="../images/2.webp" alt="">
+                    <div class="w-full flex justify-between items-center">
+                        <div class="text-left">麻辣冒菜</div>
+                        <div class="text-center">x 1</div>
+                        <div class="text-right">￥20</div>
+                    </div>
+                </div>
+                <div class="flex flex-row text-lg text-gray-600">
+                    <img src="../images/2.webp" alt="">
+                    <div class="w-full flex justify-between items-center">
+                        <div class="text-left">麻辣冒菜</div>
+                        <div class="text-center">x 1</div>
+                        <div class="text-right">￥20</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between text-gray-600 text-lg mt-4">
+                    <div class="whitespace-nowrap">&nbsp;&nbsp;配送费：</div>
+                    <div>￥2</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="h-16"></div>
+
+<div class="payBottomBar">
+    <div class="left bg-gray-800 h-16 flex items-center justify-center" style="width: 70%;">
+        <div class="text-white text-lg ">
+            ￥62
+        </div>
+    </div>
+
+    <div class="right bg-green-600 flex items-center justify-center h-16" style="width: 30%;">
+        <div class="text-white text-lg">
+            <a href="../pages/orderPay.html">
+                去支付
+            </a>
+        </div>
+    </div>
+</div>
+<script type="module" src="../src/main.ts"></script>
+</body>
+</html>

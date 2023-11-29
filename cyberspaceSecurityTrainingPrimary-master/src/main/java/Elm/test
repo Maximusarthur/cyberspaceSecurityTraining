@@ -1,0 +1,21 @@
+
+String dbURL = "jdbc:sqlserver://SD-20220201KPRR:1433;"+
+            " DatabaseName=ElmDatabase;"+
+            "integratedSecurity=false;"+
+            //如果integrated security=true表示可以在不知道数据库用户名和密码的情况下时,依然可以连接数据库;
+            // 如果integrated security=false,或者不写，表示一定要输入正确的数据库登录名和密码。
+            "encrypt=true;"+
+            "trustServerCertificate=true;";
+        try {
+        Connection con = DriverManager.getConnection(dbURL,"Elm","");//学生账号登录,代表对特定数据库的连接
+        System.out.println("Connecting Successful!");
+        Statement stmt = con.createStatement();//代表一个特定的容器,容纳并执行一条SQL语句
+        // 控制执行查询语句得到的结果集
+        ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Orders");//executeQuery()方法会把数据库响应的查询结果存放在ResultSet类对象中供我们使用
+        while(rs.next()){
+            System.out.println(rs.getInt("OrderItems")+"\t\t\t"+rs.getString("OrderId")+"\t\t\t"+rs.getString("OrderDate"));
+        }
+    }
+    catch (SQLException e) {
+        e.printStackTrace();
+    }

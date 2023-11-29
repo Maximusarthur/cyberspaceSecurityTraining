@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="../images/logo-96x96.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>饿了么</title>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="topBar">
+        <p class="text-xl"><strong>注 册</strong></p>
+    </div>
+
+    <div class="h-10"></div>
+
+    <div class="photo flex items-center justify-center h-20 mb-4">
+        <label for="upload" class="cursor-pointer">
+            <img src="../images/4.png" alt="" class="h-auto w-auto max-h-full max-w-full object-contain">
+            <input type="file" id="upload" class="hidden">
+        </label>
+    </div>
+
+    <div class="m-8 space-y-4">
+        <div>
+            <span class="text-lg">手机号码 : </span>
+            <input class="text-sm" type="tel" placeholder="手机号码" />
+        </div>
+        <hr class="mt-0">
+        <div>
+            <span class="text-lg">密 码 : </span>
+            <input class="text-sm" type="password" placeholder="密码" />
+        </div>
+        <hr class="mt-0">
+        <div>
+            <span class="text-lg">确认密码 : </span>
+            <input class="text-sm" type="password" placeholder="确认密码" />
+        </div>
+        <hr class="mt-0">
+        <div>
+            <span class="text-lg">姓 名 : </span>
+            <input class="text-sm" type="text" placeholder="姓 名" />
+        </div>
+        <hr class="mt-0">
+        <div>
+            <span class="text-lg">姓 别 : </span>
+            <label class="inline-flex items-center ml-2">
+                <input type="radio" name="gender" value="male" class="form-radio text-blue-500">
+                <span class="ml-2">男</span>
+            </label>
+            <label class="inline-flex items-center ml-4">
+                <input type="radio" name="gender" value="female" class="form-radio text-pink-500">
+                <span class="ml-2">女</span>
+            </label>
+        </div>
+
+    </div>
+
+    <div class="m-8 space-y-8 mt-10">
+        <a class="btn btn-green h-10">
+            注 册
+        </a>
+    </div>
+    <div class="bottomBar">
+        <div>
+            <a href="../index.html">
+                <i class="fas fa-home fa-lg"></i>
+                <br/>
+                首页
+            </a>
+        </div>
+        <div>
+            <a href="businessList.html">
+                <i class="far fa-compass  fa-lg"></i>
+                <br/>
+                发现
+            </a>
+        </div>
+        <div>
+            <a href="orderList.html">
+                <i class="far fa-file-alt  fa-lg"></i>
+                <br/>订单
+            </a>
+        </div>
+        <div>
+            <a href="login.html">
+                <i class="far fa-user  fa-lg"></i>
+                <br/>
+                我的
+            </a>
+        </div>
+    </div>
+
+<script type="module" src="../src/main.ts"></script>
+</body>
+</html>
