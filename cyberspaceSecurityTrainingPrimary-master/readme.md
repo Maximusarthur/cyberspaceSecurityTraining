@@ -49,7 +49,7 @@
    个人信息的更新，账号的注册与注销。
 
 #### JDBC阶段运行截图：
-![image](https://raw.githubusercontent.com/Maximusarthur/cyberspaceSecurityTrainingPrimary-master/images/image17.png "jdbc")
+![image](cyberspaceSecurityTrainingPrimary-master/images/image16.png)
 ![image](cyberspaceSecurityTrainingPrimary-master/images/image18.png "jdbc")
 ![image](cyberspaceSecurityTrainingPrimary-master/images/image19.png "jdbc")
 ![image](cyberspaceSecurityTrainingPrimary-master/images/image20.png "jdbc")
