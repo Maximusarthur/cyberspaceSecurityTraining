@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springdemo.mapper.FoodMapper">
+
+	<resultMap id="foodResultMap" type="com.example.springdemo.entities.Food">
+		<id property="foodId" column="food_id" />
+		<result property="foodName" column="food_name" />
+		<result property="foodExplain" column="food_explain" />
+		<result property="foodPrice" column="food_price" />
+		<result property="businessId" column="business_id" />
+		<result property="remarks" column="remarks" />
+	</resultMap>
+
+	<select id="listFoodByBusinessId" resultMap="foodResultMap" parameterType="java.lang.Integer">
+		SELECT * FROM Food WHERE businessId = #{businessId}
+	</select>
+
+	<select id="listAllFood" resultMap="foodResultMap">
+		SELECT * FROM Food
+	</select>
+
+	<insert id="addFood" parameterType="com.example.springdemo.entities.Food">
+		INSERT INTO Food
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="foodName != null">foodName,</if>
+			<if test="foodExplain != null">foodExplain,</if>
+			<if test="foodPrice != null">foodPrice,</if>
+			<if test="businessId != null">businessId,</if>
+			<if test="remarks != null">remarks,</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="foodName != null">#{foodName},</if>
+			<if test="foodExplain != null">#{foodExplain},</if>
+			<if test="foodPrice != null">#{foodPrice},</if>
+			<if test="businessId != null">#{businessId},</if>
+			<if test="remarks != null">#{remarks},</if>
+		</trim>
+	</insert>
+
+	<update id="updateFoodById" parameterType="com.example.springdemo.entities.Food">
+		UPDATE Food
+		<set>
+			<if test="foodName != null">foodName = #{foodName},</if>
+			<if test="foodExplain != null">foodExplain = #{foodExplain},</if>
+			<if test="foodPrice != null">foodPrice = #{foodPrice},</if>
+			<if test="businessId != null">businessId = #{businessId},</if>
+			<if test="remarks != null">remarks = #{remarks},</if>
+		</set>
+		WHERE foodId = #{foodId}
+	</update>
+
+	<delete id="deleteFoodById" parameterType="java.lang.Integer">
+		DELETE FROM Food WHERE foodId = #{foodId}
+	</delete>
+
+</mapper>

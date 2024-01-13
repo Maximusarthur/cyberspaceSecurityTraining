@@ -1,0 +1,23 @@
+server:
+  port: 9527
+
+spring:
+  datasource:
+    password: "WingKin45!"
+    username: "elm"
+    url: jdbc:mysql://101.42.21.178:3306/ELM
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    user:
+      name: maximus
+      password: 10086
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.springdemo.entities
+
+logging:
+  level:
+    org:
+      springframework:
+        security=DEBUG:
