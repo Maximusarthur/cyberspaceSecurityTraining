@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springdemo.mapper.DeliveryAddressMapper">
+
+	<resultMap id="deliveryAddressResultMap" type="com.example.springdemo.entities.DeliveryAddress">
+		<id property="daId" column="daId" />
+		<result property="contactName" column="contactName" />
+		<result property="contactSex" column="contactSex" />
+		<result property="contactTel" column="contactTel" />
+		<result property="address" column="address" />
+		<result property="userId" column="userId" />
+	</resultMap>
+
+	<select id="listDeliveryAddressByUserId" resultMap="deliveryAddressResultMap" parameterType="java.lang.String">
+		SELECT * FROM DeliveryAddress WHERE userId=#{userId} ORDER BY daId
+	</select>
+
+	<select id="getDeliveryAddressById" resultMap="deliveryAddressResultMap" parameterType="java.lang.Integer">
+		SELECT * FROM DeliveryAddress WHERE daId=#{daId}
+	</select>
+
+	<insert id="saveDeliveryAddress" parameterType="com.example.springdemo.entities.DeliveryAddress">
+		INSERT INTO DeliveryAddress
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="contactName != null">contactName,</if>
+			<if test="contactSex != null">contactSex,</if>
+			<if test="contactTel != null">contactTel,</if>
+			<if test="address != null">address,</if>
+			<if test="userId != null">userId,</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="contactName != null">#{contactName},</if>
+			<if test="contactSex != null">#{contactSex},</if>
+			<if test="contactTel != null">#{contactTel},</if>
+			<if test="address != null">#{address},</if>
+			<if test="userId != null">#{userId},</if>
+		</trim>
+	</insert>
+
+	<update id="updateDeliveryAddress" parameterType="com.example.springdemo.entities.DeliveryAddress">
+		UPDATE DeliveryAddress
+		<set>
+			<if test="contactName != null">contactName = #{contactName},</if>
+			<if test="contactSex != null">contactSex = #{contactSex},</if>
+			<if test="contactTel != null">contactTel = #{contactTel},</if>
+			<if test="address != null">address = #{address},</if>
+		</set>
+		WHERE da_id = #{daId}
+	</update>
+
+	<delete id="removeDeliveryAddress" parameterType="java.lang.Integer">
+		DELETE FROM DeliveryAddress WHERE daId = #{daId}
+	</delete>
+
+</mapper>

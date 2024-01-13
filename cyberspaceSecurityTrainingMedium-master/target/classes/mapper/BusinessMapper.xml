@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springdemo.mapper.BusinessMapper">
+	<!-- 查询所有商家 -->
+	<select id="findAllBusiness" resultType="com.example.springdemo.entities.Business">
+		SELECT * FROM Business;
+	</select>
+
+	<!-- 添加商家 -->
+	<insert id="addBusiness" parameterType="com.example.springdemo.entities.Business">
+		INSERT INTO Business (businessName, businessAddress, businessExplain, orderTypeId, starPrice, deliveryPrice, remarks)
+		VALUES (
+		<if test="businessName != null">#{businessName},</if>
+		<if test="businessAddress != null">#{businessAddress},</if>
+		<if test="businessExplain != null">#{businessExplain},</if>
+		<if test="orderTypeId != null">#{orderTypeId},</if>
+		<if test="starPrice != null">#{starPrice},</if>
+		<if test="deliveryPrice != null">#{deliveryPrice},</if>
+		<if test="remarks != null">#{remarks}</if>
+		)
+	</insert>
+
+	<!-- 更新商家 -->
+	<update id="updateBusiness" parameterType="com.example.springdemo.entities.Business">
+		UPDATE Business
+		SET
+		businessName = <if test="businessName != null">#{businessName},</if>
+		businessAddress = <if test="businessAddress != null">#{businessAddress},</if>
+		businessExplain = <if test="businessExplain != null">#{businessExplain},</if>
+		orderTypeId = <if test="orderTypeId != null">#{orderTypeId},</if>
+		starPrice = <if test="starPrice != null">#{starPrice},</if>
+		deliveryPrice = <if test="deliveryPrice != null">#{deliveryPrice},</if>
+		remarks = <if test="remarks != null">#{remarks}</if>
+		WHERE businessId = #{businessId}
+	</update>
+
+
+	<!-- 根据ID查找商家 -->
+		<select id="getBusinessById" resultType="com.example.springdemo.entities.Business">
+			SELECT * FROM Business WHERE businessId = #{businessId}
+		</select>
+
+		<!-- 根据ID删除商家 -->
+		<delete id="deleteBusinessById" parameterType="int">
+			DELETE FROM Business WHERE businessId = #{businessId}
+		</delete>
+</mapper>    
